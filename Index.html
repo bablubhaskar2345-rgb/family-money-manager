@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Family Money Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 15px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      font-size: 16px;
+    }
+    button {
+      background-color: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>➕ Add Daily Expense</h2>
+
+<form action="https://script.google.com/macros/s/XXXXXXXX/exec" method="post">
+  
+  <input type="hidden" name="sheet" value="Expenses">
+
+  <label>Date</label>
+  <input type="date" name="date" required>
+
+  <label>Person</label>
+  <select name="person">
+    <option>Dad</option>
+    <option>Mom</option>
+    <option>Brother</option>
+    <option>Brother's Wife</option>
+    <option>Child</option>
+    <option>Me</option>
+  </select>
+
+  <label>Category</label>
+  <select name="category">
+    <option>Groceries</option>
+    <option>Vegetables</option>
+    <option>Milk</option>
+    <option>Rent</option>
+    <option>EMI</option>
+    <option>Electricity</option>
+    <option>Water</option>
+    <option>Medical</option>
+    <option>School</option>
+    <option>Travel</option>
+    <option>Shopping</option>
+    <option>Others</option>
+  </select>
+
+  <label>Amount (₹)</label>
+  <input type="number" name="amount" required>
+
+  <label>Notes</label>
+  <input type="text" name="notes" placeholder="Optional">
+
+  <button type="submit">Save Expense</button>
+
+</form>
+
+</body>
+</html>
